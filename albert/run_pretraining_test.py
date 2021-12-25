@@ -29,7 +29,6 @@ import tensorflow.compat.v1 as tf
 
 FLAGS = tf.app.flags.FLAGS
 
-
 def _create_config_file(filename, max_seq_length, vocab_size):
   """Creates an AlbertConfig and saves it to file."""
   albert_config = modeling.AlbertConfig(

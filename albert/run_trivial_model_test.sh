@@ -5,15 +5,15 @@
 set -e
 set -x
 
-virtualenv -p python3 .
-source ./bin/activate
+#virtualenv -p python3 .
+#source ./bin/activate
 
 OUTPUT_DIR_BASE="$(mktemp -d)"
 OUTPUT_DIR="${OUTPUT_DIR_BASE}/output"
 
-pip install numpy
-pip install -r requirements.txt
-python -m run_pretraining_test \
+#pip install numpy
+#pip install -r requirements.txt
+python -m albert.run_pretraining_test \
     --output_dir="${OUTPUT_DIR}" \
     --do_train \
     --do_eval \
