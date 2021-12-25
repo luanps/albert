@@ -16,7 +16,6 @@
 
 from __future__ import absolute_import
 from __future__ import division
-# from __future__ import google_type_annotations
 from __future__ import print_function
 import collections
 import csv
@@ -780,7 +779,7 @@ def create_model(albert_config, is_training, input_ids, input_mask, segment_ids,
       use_einsum=True,
       hub_module=hub_module)
 
-  hidden_size = output_layer.shape[-1].value
+  hidden_size = output_layer.shape[-1]
 
   output_weights = tf.get_variable(
       "output_weights", [num_labels, hidden_size],
